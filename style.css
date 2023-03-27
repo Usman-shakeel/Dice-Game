@@ -1,0 +1,85 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    margin: auto;
+    background-color: brown;
+    position: relative;
+    text-align: center;
+}
+
+.header {
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: max-content;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    color: brown;
+    font-size: 12px;
+}
+.attempt h1 {
+    color: #fff;
+    font-size: 24px;
+}
+.attempt span {
+    font-size: 24px;
+    font-weight: 600;
+}
+.dice-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    color: #fff;
+}
+
+span {
+    color: #fff;
+}
+
+.player {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 50%; */
+}
+
+button {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-style: none;
+    color: brown;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0.5rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: #fff;
+    background-color: red;
+}

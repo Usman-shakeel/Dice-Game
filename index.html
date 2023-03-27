@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+             <h1>Dice Game</h1>
+        <p>by Usman Shakeel</p>
+        </div>
+
+        <div class="attempt">
+            <h1>Attempts:</h1>
+            <Span id="attempts">00</Span>
+        </div>
+       
+        <div class="dice-img">
+            <span id="dice">&#9856;</span>
+        </div>
+        <div class="player">
+            <button id="one" onclick="rollDice(1);">Player 1</button>
+            <button id="two" onclick="rollDice(2);">Player 2</button>
+            <button id="three" onclick="rollDice(3);">Player 3</button>
+            <button id="four" onclick="rollDice(4);">Player 4</button>
+            <button id="five" onclick="rollDice(5);">Player 5</button>
+            <button id="six" onclick="rollDice(6);">Player 6</button>
+        </div>
+    </div>
+    
+</body>
+</html>
