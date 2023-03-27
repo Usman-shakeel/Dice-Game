@@ -9,18 +9,23 @@ var dices = [
 var attempts = 0;
 
 
-function rollDice() {
+function rollDice(number) {
   attempts++;
   var randomIndex = Math.floor(Math.random() * dices.length);
   var newDice = dices[randomIndex];
 //   console.log(newDice);
-  document.querySelector(".dice-img").innerHTML = newDice;
+  document.querySelector("#dice").innerHTML = newDice;
+
+  var playerNumber = number;
+  console.log(playerNumber);
 
 
 
   document.getElementById("attempts").innerHTML = attempts;
   console.log("attempts:" + attempts);
-  if (attempts >= 10) {
+  if (attempts === 10) {
+    document.querySelector(".result span").innerHTML = "Player " + playerNumber + " Loss!";
+    console.log("You Loss!");
     attempts = 0;
   }
 
@@ -40,13 +45,17 @@ function rollDice() {
     diceValue = 6;
   }
   console.log("Dice appared as" + ' ' + diceValue);
-}
 
-// function rollDice(playerNumber) {
-//     console.log("Player " + playerNumber + " was clicked");
-//     // Rest of the code for rolling the dice
-//   }
+  if (playerNumber === diceValue) {
+    console.log("You Won!");
+    var winPercentage = attempts;
+    document.querySelector(".percentage span").innerHTML = (attempts/10*100 + "%");
+    attempts = 0;
+    document.querySelector(".result span").innerHTML = "Player " + playerNumber + " Won!";
+  }
+  else {
+    document.querySelector(".result span").innerHTML = "Yet to decide!";
+  }
 
-//   var playerNumber = rollDice(number);
-//   console.log(playerNumber);
   
+}
